@@ -1,0 +1,14 @@
+CREATE TABLE users
+(
+    id SERIAL PRIMARY KEY,
+    username CHARACTER VARYING UNIQUE,
+    fio CHARACTER VARYING
+);
+
+CREATE TABLE logins
+(
+    id SERIAL PRIMARY KEY,
+    accesdate TIMESTAMP,
+    user_id INTEGER REFERENCES users (id) ON DELETE CASCADE ON UPDATE CASCADE,
+    application VARCHAR
+);
