@@ -45,8 +45,6 @@ public class LogTransformationAspect {
             writer.write(text);
             // запись по символам
             writer.append('\n');
-
-            writer.flush();
         }
         catch(IOException ex){
             log.error(ex.getMessage());

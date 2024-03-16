@@ -86,7 +86,7 @@ public class LoginLoadService implements LoadService<Login> {
             }
 
         } catch (IOException e) {
-            log.error(Arrays.toString(e.getStackTrace()));
+            log.error(e.getMessage(), e);
         }
 
         return logins;
